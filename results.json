@@ -1,0 +1,35 @@
+{
+  "download": 100740319.18080968,
+  "upload": 103760477.22822602,
+  "ping": 12.504,
+  "server": {
+    "url": "http://speedtest.tachyondynamics.com/speedtest/upload.php",
+    "lat": "36.7674",
+    "lon": "-76.2874",
+    "name": "Chesapeake, VA",
+    "country": "United States",
+    "cc": "US",
+    "sponsor": "Tachyon Dynamics",
+    "id": "3974",
+    "url2": "http://speedtest2.tachyondynamics.com/speedtest/upload.php",
+    "host": "speedtest.tachyondynamics.com:8080",
+    "d": 19.01585243269486,
+    "latency": 12.504
+  },
+  "timestamp": "2018-09-13T17:00:11.626171Z",
+  "bytes_sent": 129851392,
+  "bytes_received": 126594448,
+  "share": "http://www.speedtest.net/result/7632956455.png",
+  "client": {
+    "ip": "68.131.36.22",
+    "lat": "36.8463",
+    "lon": "-76.0979",
+    "isp": "Verizon Fios",
+    "isprating": "3.7",
+    "rating": "0",
+    "ispdlavg": "0",
+    "ispulavg": "0",
+    "loggedin": "0",
+    "country": "US"
+  }
+}

@@ -30,17 +30,17 @@ def process_speedtest_data(speed_results):
   return entry
 
 def write_to_database(formatted_speed_results):
-  client = MongoClient('localhost', 27017)
-  db = client['speedtest']
-  collection = db['2018_speedtests']
-  posts = db.posts
-  post_id = posts.insert_one(formatted_speed_results).inserted_id
-  print(post_id)
+  client = MongoClient("mongodb://localhost:27017/")
+  db = client["speedtest"]
+  collection = db["2018_speedtests"]
+  post_id = collection.insert_one(formatted_speed_results)
+  print (post_id)
 
 
 if __name__ == '__main__':
-  formatted_speed_results = process_speedtest_data( run_speedtest() ) 
-  write_to_database(formatted_speed_results)
+  write_to_database( 
+    process_speedtest_data( run_speedtest() ) 
+    )
 """ def test_process_data():
   test_answer = {'upload': 103.76, 'download': 100.74, 'ping': 13, 'timestamp': '2018-09-13T17:00:11.626171Z'}
   with open('./results.json') as f:

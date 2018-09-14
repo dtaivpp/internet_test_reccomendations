@@ -5,7 +5,7 @@ from urllib import request
 from platform   import system as system_name  # Returns the system/OS name
 from subprocess import call   as system_call  # Execute a shell command
 
-def ping(host):
+def ping(host='8.8.8.8'):
     """
     Returns True if host (str) responds to a ping request.
     Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.

@@ -49,12 +49,12 @@ def write_to_database():
   return
 
 if __name__ == '__main__':
-  if (ping()):
-    test_results = process_speedtest_data(run_speedtest())
-    write_to_database(test_results)
 
   
 """ def test_process_data():
+  if (ping()):
+    test_results = process_speedtest_data(run_speedtest())
+    write_to_database(test_results)
   test_answer = {'upload': 103.76, 'download': 100.74, 'ping': 13, 'timestamp': '2018-09-13T17:00:11.626171Z'}
   with open('./results.json') as f:
     data = json.load(f)

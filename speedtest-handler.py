@@ -1,11 +1,6 @@
-import speedtest
-import json
-from datetime import datetime
-from pymongo import MongoClient
-from urllib import request
+
 from platform   import system as system_name  # Returns the system/OS name
 from subprocess import call   as system_call  # Execute a shell command
-
 def ping(host='8.8.8.8'):
     """
     Returns True if host (str) responds to a ping request.
@@ -21,6 +16,7 @@ def ping(host='8.8.8.8'):
     # Pinging
     return system_call(command) == 0
 
+import speedtest
 def run_speedtest():
   servers = []
   s = speedtest.Speedtest()
@@ -32,6 +28,7 @@ def run_speedtest():
 
   return s.results.dict()
 
+from urllib import request
 def process_speedtest_data(speed_results):
   # Formatting for the db entry
   entry = {}
@@ -46,6 +43,8 @@ def process_speedtest_data(speed_results):
   # returns formatted entry
   return entry
 
+from pymongo import MongoClient
+from datetime import datetime
 def write_to_database(formatted_speed_results):
   client = MongoClient("mongodb://localhost:27017/")
   db = client["speedtest"]
